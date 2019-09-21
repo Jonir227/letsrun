@@ -1,7 +1,11 @@
 import Layout from "../components/Layout";
 
 const Index = () => {
-  return <Layout>hi</Layout>;
+  return (
+    <Layout>
+      <h1>만기 경마</h1>
+    </Layout>
+  );
 };
 
 export default Index;
