@@ -7,7 +7,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "start:production": "node ./scripts/start.js"
+    "prestart:prod": "npm run build",
+    "start:prod": "NODE_ENV=production forever start ./scripts/start.js"
   },
   "keywords": [],
   "author": "",
