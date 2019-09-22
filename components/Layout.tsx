@@ -1,4 +1,5 @@
 import Header from "./Header";
+import { FC } from "react";
 
 const layoutStyle = {
   margin: 20,
@@ -6,10 +7,10 @@ const layoutStyle = {
   border: "1px solid #DDD"
 };
 
-const Layout = props => (
+const Layout: FC = ({ children }) => (
   <div style={layoutStyle}>
     <Header />
-    {props.children}
+    {children}
   </div>
 );
 
