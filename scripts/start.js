@@ -16,7 +16,7 @@ app.prepare().then(() => {
   server.use(
     "/api",
     proxy({
-      target: "https://jsonplaceholder.typicode.com/todos/1",
+      target: "https://jsonplaceholder.typicode.com/",
       changeOrigin: true,
       pathRewrite: { [`^api/`]: "/" },
       logLevel: "debug"
