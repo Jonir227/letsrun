@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import withRedux from "next-redux-wrapper";
 import App, { AppContext } from "next/app";
+import React from "react";
 import { Provider } from "react-redux";
 import createStore from "../redux/createStore";
-import withRedux from "next-redux-wrapper";
 
 interface ILetsRun {
   store: any;

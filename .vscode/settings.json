@@ -1,0 +1,6 @@
+{
+  "explorer.sortOrder": "type",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  }
+}
