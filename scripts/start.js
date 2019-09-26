@@ -18,7 +18,7 @@ app.prepare().then(() => {
     proxy({
       target: "https://jsonplaceholder.typicode.com",
       changeOrigin: true,
-      pathRewrite: (path, req) => path.replace("/api", "/")
+      pathRewrite: path => path.replace("/api", "/")
     })
   );
 

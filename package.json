@@ -17,6 +17,7 @@
   "dependencies": {
     "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
+    "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.6.0",
     "@types/axios": "^0.14.0",
     "@types/next-redux-wrapper": "^2.0.2",
