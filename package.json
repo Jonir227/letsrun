@@ -8,7 +8,6 @@
     "test": "jest --config=jest.config.js",
     "build": "next build",
     "start": "next start",
-    "prestart:prod": "npm run build",
     "start:prod": "NODE_ENV=production forever start ./scripts/start.js"
   },
   "keywords": [],
@@ -19,6 +18,7 @@
     "@babel/preset-env": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.6.0",
+    "@babel/runtime": "^7.6.2",
     "@types/axios": "^0.14.0",
     "@types/next-redux-wrapper": "^2.0.2",
     "@types/react-redux": "^7.1.2",
@@ -38,6 +38,7 @@
     "redux-saga": "^1.1.1"
   },
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.6.2",
     "@types/node": "^12.7.5",
     "@types/react": "^16.9.2",
     "typescript": "^3.6.3"

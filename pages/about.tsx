@@ -20,7 +20,6 @@ const About: NextPage<IAboutProps> = ({ data }) => {
 };
 
 About.getInitialProps = async context => {
-  // const res = await axios.get("/api/todos/1");
   const res = await axios.get(getCurrentUrl("/api/todos/1"));
   return { data: res.data };
 };
