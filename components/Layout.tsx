@@ -1,5 +1,5 @@
+import React, { FC } from "react";
 import Header from "./Header";
-import { FC } from "react";
 
 const layoutStyle = {
   margin: 20,
