@@ -1,6 +1,9 @@
-name: Node CI
+name: Push On Matser
 
-on: pull_request
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   test:

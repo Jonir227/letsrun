@@ -1,0 +1,20 @@
+name: PullRequest
+
+on: pull_request
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: npm install, and test
+        run: |
+          npm install
+          npm run test
+        env:
+          CI: true
