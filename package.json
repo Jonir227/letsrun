@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "node ./scripts/start.js",
     "test": "jest --config=jest.config.js",
+    "test:watch": "jest --config=jest.config.js --watch",
     "build": "next build",
     "start": "next start",
     "start:prod": "NODE_ENV=production forever start ./scripts/start.js"
@@ -20,6 +21,7 @@
     "@babel/preset-typescript": "^7.6.0",
     "@babel/runtime": "^7.6.2",
     "@types/axios": "^0.14.0",
+    "@types/jest": "^24.0.18",
     "@types/next-redux-wrapper": "^2.0.2",
     "@types/react-redux": "^7.1.2",
     "@types/redux": "^3.6.0",
