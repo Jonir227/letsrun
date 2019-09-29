@@ -2,7 +2,7 @@
  * @jest-environment node
  */
 
-import getCurrentUrl from "../../utils/getCurrentUrl";
+import getCurrentUrl from "./getCurrentUrl";
 
 describe("GetCurrentUrl in Server", () => {
   test("Should be return full location when its called in server", () => {
