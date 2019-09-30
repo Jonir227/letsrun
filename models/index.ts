@@ -1,1 +1,1 @@
-export { default as HorseProfile } from "./HorseProfile";
+export * from "./HorseProfile";

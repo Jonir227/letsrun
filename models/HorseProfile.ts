@@ -1,4 +1,4 @@
-interface HorseProfile {
+export interface HorseProfile {
   number: string;
   name: string;
   age: number;
@@ -43,5 +43,3 @@ interface HorseProfile {
   moneyYear: number;
   moneyHalfYear: number;
 }
-
-export default HorseProfile;
