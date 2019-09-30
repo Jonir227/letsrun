@@ -1,5 +1,5 @@
 import { call, put } from "redux-saga/effects";
-import createEntityAction from "../createEntityAction";
+import { createEntityAction } from "../createAction";
 import fetchEntity from "./fetchEntitiy";
 
 const actionMock = {
