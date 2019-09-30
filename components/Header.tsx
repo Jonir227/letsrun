@@ -13,6 +13,9 @@ const Header = () => (
     <Link href="/about">
       <a style={linkStyle}>About</a>
     </Link>
+    <Link href="/horse">
+      <a style={linkStyle}>말 정보</a>
+    </Link>
   </div>
 );
 

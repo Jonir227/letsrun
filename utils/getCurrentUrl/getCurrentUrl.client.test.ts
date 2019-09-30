@@ -1,4 +1,4 @@
-import getCurrentUrl from "../../utils/getCurrentUrl";
+import getCurrentUrl from "./getCurrentUrl";
 
 test("Sould be return location", () => {
   const url = "/api/path";

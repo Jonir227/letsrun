@@ -1,9 +1,8 @@
-import { take } from "@redux-saga/core/effects";
+import { all, fork } from "redux-saga/effects";
+import horseProfileRootSaga from "./horseProfileSaga";
 
 function* rootSaga() {
-  while (true) {
-    yield take("NO_ACTION");
-  }
+  yield all([fork(horseProfileRootSaga)]);
 }
 
 export default rootSaga;

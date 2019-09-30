@@ -1,14 +1,8 @@
-import axios from "axios";
 import { NextPage } from "next";
 import React from "react";
 import Layout from "../components/Layout";
-import getCurrentUrl from "../utils/getCurrentUrl";
 
-interface IAboutProps {
-  data: any;
-}
-
-const About: NextPage<IAboutProps> = ({ data }) => {
+const About: NextPage = () => {
   return (
     <Layout>
       <div style={{ margin: "auto" }}>
@@ -17,11 +11,6 @@ const About: NextPage<IAboutProps> = ({ data }) => {
       </div>
     </Layout>
   );
-};
-
-About.getInitialProps = async context => {
-  const res = await axios.get(getCurrentUrl("/api/todos/1"));
-  return { data: res.data };
 };
 
 export default About;

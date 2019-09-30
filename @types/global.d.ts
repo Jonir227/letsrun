@@ -1,3 +1,1 @@
-declare interface Window {
-  __NEXT_REDUX_STORE__?: string;
-}
+type Status = "INIT" | "REQUEST" | "SUCCESS" | "FAILURE";

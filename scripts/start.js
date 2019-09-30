@@ -16,9 +16,8 @@ app.prepare().then(() => {
   server.use(
     "/api",
     proxy({
-      target: "https://jsonplaceholder.typicode.com",
-      changeOrigin: true,
-      pathRewrite: path => path.replace("/api", "/")
+      target: "http://kyungma.info/",
+      changeOrigin: true
     })
   );
 
