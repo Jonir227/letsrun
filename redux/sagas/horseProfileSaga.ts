@@ -1,12 +1,12 @@
 import { all, call, fork, take } from "redux-saga/effects";
 import fetchEntity from "../../utils/fetchEntity";
 import {
-  getHorseInfoEntityAction,
-  GetHorseProfile
+  GetHorseProfile,
+  getHorseProfileEntityAction
 } from "../actions/horseProfileActions";
 import { GET_HORSE_PROFILE } from "../actionTypes";
 
-const horseProfileEntitiySaga = fetchEntity(getHorseInfoEntityAction);
+const horseProfileEntitiySaga = fetchEntity(getHorseProfileEntityAction);
 
 function* horseProfileWatcher() {
   while (true) {

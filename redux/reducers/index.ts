@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import horseProfile, { IHorseProfileStore } from "./horseInfo";
+import horseProfile, { IHorseProfileStore } from "./horseProfile";
 
 export interface IRootStore {
   horseProfile: IHorseProfileStore;

@@ -1,7 +1,7 @@
 import produce from "immer";
-import { HorseProfile } from "../../models";
-import { HorseProfileAction } from "../actions";
-import { GET_HORSE_PROFILE_ENTITY } from "../actionTypes";
+import { HorseProfile } from "../../../models";
+import { HorseProfileAction } from "../../actions";
+import { GET_HORSE_PROFILE_ENTITY } from "../../actionTypes";
 
 export interface IHorseProfileStore {
   getHorseInfoStatus: Status;
@@ -27,6 +27,8 @@ const horseProfile = produce(
       }
       case GET_HORSE_PROFILE_ENTITY.FAILURE: {
         draft.getHorseInfoStatus = "FAILURE";
+        draft.horseProfile = null;
+        break;
       }
     }
   },

@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 import { getHorseProfile } from "../redux/actions/horseProfileActions";
 import { GET_HORSE_PROFILE_ENTITY } from "../redux/actionTypes";
 import { IRootStore } from "../redux/reducers";
-import { IHorseProfileStore } from "../redux/reducers/horseInfo";
+import { IHorseProfileStore } from "../redux/reducers/horseProfile";
 import { NextReduxPage } from "../typings";
 import { wait } from "../utils/reduxSagaSSRMiddleware";
 

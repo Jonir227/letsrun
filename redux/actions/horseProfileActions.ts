@@ -10,10 +10,10 @@ export const getHorseProfile = createAction(
 );
 export type GetHorseProfile = ReturnType<typeof getHorseProfile>;
 
-export const getHorseInfoEntityAction = createEntityAction(
+export const getHorseProfileEntityAction = createEntityAction(
   GET_HORSE_PROFILE_ENTITY,
   fetchHorseProfileUsingGET
 );
-export type GetHorseInfoEntityAction = EntityAction<
-  typeof getHorseInfoEntityAction
+export type GetHorseProfileEntityAction = EntityAction<
+  typeof getHorseProfileEntityAction
 >;

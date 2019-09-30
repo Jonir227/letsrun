@@ -1,6 +1,6 @@
 import {
-  GetHorseInfoEntityAction,
-  GetHorseProfile
+  GetHorseProfile,
+  GetHorseProfileEntityAction
 } from "./horseProfileActions";
 
-export type HorseProfileAction = GetHorseProfile | GetHorseInfoEntityAction;
+export type HorseProfileAction = GetHorseProfile | GetHorseProfileEntityAction;
