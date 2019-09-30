@@ -6,7 +6,7 @@ import createAction from "./createAciton";
 const createEntityAction = <R, S, F, PARAM extends any[], DATA>(
   entitiy: IEntity<R, S, F>,
   api: API<PARAM, DATA>
-): IEntityAction => ({
+) => ({
   action: {
     REQUEST: createAction(entitiy.REQUEST),
     SUCCESS: createAction(entitiy.SUCCESS, (data: DATA) => data),
