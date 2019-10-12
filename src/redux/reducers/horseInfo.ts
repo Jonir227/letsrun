@@ -1,7 +1,8 @@
-import produce from "immer";
-import { HorseProfile } from "../../models";
-import { HorseProfileAction } from "../actions";
-import { GET_HORSE_PROFILE_ENTITY } from "../actionTypes";
+import produce from 'immer';
+import { HorseProfile } from '../../models';
+import { matchProduceAction } from '../../utils/matchAction/matchAction';
+import { HorseProfileAction } from '../actions';
+import { GET_HORSE_PROFILE_ENTITY } from '../actionTypes';
 
 export interface IHorseProfileStore {
   getHorseInfoStatus: Status;
@@ -9,28 +10,26 @@ export interface IHorseProfileStore {
 }
 
 const defaultState: IHorseProfileStore = {
-  getHorseInfoStatus: "INIT",
+  getHorseInfoStatus: 'INIT',
   horseProfile: null
 };
 
 const horseProfile = produce(
-  (draft: IHorseProfileStore, action: HorseProfileAction) => {
-    switch (action.type) {
-      case GET_HORSE_PROFILE_ENTITY.REQUEST: {
-        draft.getHorseInfoStatus = "REQUEST";
-        break;
+  matchProduceAction<IHorseProfileStore, HorseProfileAction>(
+    {
+      [GET_HORSE_PROFILE_ENTITY.REQUEST]: state => {
+        state.getHorseInfoStatus = 'REQUEST';
+      },
+      [GET_HORSE_PROFILE_ENTITY.SUCCESS]: (state, { payload }) => {
+        state.getHorseInfoStatus = 'SUCCESS';
+        state.horseProfile = payload.horseProfile;
+      },
+      [GET_HORSE_PROFILE_ENTITY.FAILURE]: state => {
+        state.getHorseInfoStatus = 'FAILURE';
       }
-      case GET_HORSE_PROFILE_ENTITY.SUCCESS: {
-        draft.getHorseInfoStatus = "SUCCESS";
-        draft.horseProfile = action.payload.horseProfile;
-        break;
-      }
-      case GET_HORSE_PROFILE_ENTITY.FAILURE: {
-        draft.getHorseInfoStatus = "FAILURE";
-      }
-    }
-  },
-  defaultState
+    },
+    defaultState
+  )
 );
 
 export default horseProfile;

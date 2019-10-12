@@ -1,3 +1,1 @@
-import matchAction from './matchAction';
-
-export default matchAction;
+export * from './matchAction';
