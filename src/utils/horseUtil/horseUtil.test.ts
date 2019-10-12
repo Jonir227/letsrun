@@ -1,5 +1,5 @@
 import { HorseProfile } from '../../models';
-import { getHorseDate } from './HorseUtil';
+import { parseHorseGameDate } from './HorseUtil';
 
 const testHorseProfile = {
   gameDate: [2019, 10, 12]
@@ -7,6 +7,6 @@ const testHorseProfile = {
 
 describe('Test Set of HorseUtil', () => {
   test('getHorseDate sould be return proper parsed readable date', () => {
-    expect(getHorseDate(testHorseProfile)).toBe('2019년 10월 12일');
+    expect(parseHorseGameDate(testHorseProfile)).toBe('2019년 10월 12일');
   });
 });
