@@ -4,7 +4,7 @@ export interface HorseProfile {
   age: number;
   createDate: null | string;
   home: string; // TODO: enum형태인지?
-  gameDate: number[]; // [년, 월, 일]
+  gameDate: [number, number, number]; // [년, 월, 일]
   day: DateKor;
   horseNo: number;
   sex: string; // TODO: enum형태인지? "거세마", "암말", "숫말..>"
