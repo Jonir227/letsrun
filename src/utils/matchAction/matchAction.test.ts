@@ -61,4 +61,11 @@ describe('matchAction', () => {
     state = reducer(state, changeAge());
     expect(state).toEqual({ name: 'A', age: 3 });
   });
+  test('should return previous state when not matched', () => {
+    let state = reducer();
+    expect(state).toEqual(defaultState);
+    // @ts-ignore
+    state = reducer(state, { type: 'asdf ' });
+    expect(state).toEqual(defaultState);
+  });
 });

@@ -10,8 +10,10 @@ const matchAction = <S, A extends Action<string>>(
   actionMap: ActionMap<A, S>,
   defaultState: S
 ) => (state = defaultState, action?: A) => {
-    // @ts-ignore
-    return action ? actionMap[action.type](state, action) : state;
+  // @ts-ignore
+  const useReducer = !!(action && actionMap[action.type]);
+  // @ts-ignore
+  return useReducer ? actionMap[action.type](state, action) : state;
 };
 
 export default matchAction;
