@@ -1,10 +1,7 @@
-import { all, call, fork, take } from "redux-saga/effects";
-import fetchEntity from "../../utils/fetchEntity";
-import {
-  getHorseInfoEntityAction,
-  GetHorseProfile
-} from "../actions/horseProfileActions";
-import { GET_HORSE_PROFILE } from "../actionTypes";
+import { all, call, fork, take } from 'redux-saga/effects';
+import fetchEntity from '../../utils/fetchEntity';
+import { getHorseInfoEntityAction, GetHorseProfile } from '../actions/horseProfileActions';
+import { GET_HORSE_PROFILE } from '../actionTypes';
 
 const horseProfileEntitiySaga = fetchEntity(getHorseInfoEntityAction);
 
